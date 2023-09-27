@@ -1,22 +1,22 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import CustomTable from './Table';
+import SearchInput from './searchInput';
 
 function App() {
+  const [searchText, setSearchText] = useState('');
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <h1>Ant Design Table Example</h1>
+      <SearchInput 
+    searchText={searchText} 
+    setSearchText={setSearchText} 
+    />
+      <CustomTable
+      searchText={searchText} />
+    </div>
       </header>
     </div>
   );
