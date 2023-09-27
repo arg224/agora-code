@@ -1,27 +1,26 @@
 .react-resizable {
-    position: relative;
-    background-clip: padding-box;
-  }
-  
-  .react-resizable-handle {
-    position: absolute;
-    right: -5px;
-    bottom: 0;
-    z-index: 1;
-    width: 10px;
-    height: 100%;
-    cursor: col-resize;
-  }
-  .ant-table-tbody > tr:nth-child(odd) {
-    background-color: #f5f5f5; 
-  }
-  .fixed-table {
-    position: fixed;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-  }
-  
+  position: relative;
+  background-clip: padding-box;
+}
 
-  
+.react-resizable-handle {
+  position: absolute;
+  right: -5px;
+  bottom: 0;
+  z-index: 1;
+  width: 10px;
+  height: 100%;
+  cursor: col-resize;
+}
+
+.ant-table-tbody>tr:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+
+.fixed-table {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}

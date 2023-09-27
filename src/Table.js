@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './Table.css';
 import { Table } from 'antd';
-import ResizableTitle from './resizeTable'; 
+import ResizableTitle from './resizeTable';
 import data from './data';
 
-const CustomTable = ({searchText}) => {
+const CustomTable = ({ searchText }) => {
 
   const [filteredData, setFilteredData] = useState(data);
 
@@ -39,9 +39,9 @@ const CustomTable = ({searchText}) => {
   useEffect(() => {
     const savedColumnWidths = localStorage.getItem('columnWidths');
     if (savedColumnWidths) {
-        console.log("saved", savedColumnWidths)
-        setColumns(JSON.parse(savedColumnWidths));
-        console.log("set", columns)
+      console.log("saved", savedColumnWidths)
+      setColumns(JSON.parse(savedColumnWidths));
+      console.log("set", columns)
     }
   }, []);
 
@@ -79,7 +79,7 @@ const CustomTable = ({searchText}) => {
   return (
     <div>
       <Table
-       className="striped-table fixed-table"
+        className="striped-table fixed-table"
         bordered
         components={{
           header: {
@@ -89,7 +89,7 @@ const CustomTable = ({searchText}) => {
         columns={mergeColumns}
         dataSource={filteredData}
         pagination={{ pageSize: 8 }}
-        scroll={{ x: 1000}}
+        scroll={{ x: 1000 }}
       />
     </div>
   );
